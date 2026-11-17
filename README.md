@@ -1,4 +1,4 @@
-# claude-rules
+# rules
 
 문제 유형별 접근·해결 방식을 규칙으로 정리해, 에이전트가 일관된 방식으로 작업하게 하는 규칙 모음.
 
@@ -11,9 +11,9 @@
 
 에이전트들이 이 규칙을 바탕으로 작업하게 해서, 결과물과 작업 과정에 **통일성과 규칙성**을 갖게 하는 것이 목표다.
 
-## claude-code-harness와의 차이
+## harness와의 차이
 
-| | [claude-code-harness](https://github.com/junhyeong9812/claude-code-harness) | claude-rules |
+| | [harness](https://github.com/agent-discipline/harness) | rules |
 |---|---|---|
 | 정하는 것 | **어떤 절차로 일하는가** | **이 문제는 어떤 방식으로 푸는가** |
 | 내용 | 인터뷰 → 명세서 합의 → 구현 → 검증 → 기록 | 문제 유형별 접근 방식과 해결 방식 |
