@@ -43,7 +43,8 @@
 | 허수아비 코드 | strawman | 일부러 망가뜨린 코드 | 좌석 랩 ADR-000 |
 | 격벽 | bulkhead | 벌크헤드 | payment, notification 랩 ADR-000 |
 | 지엽성 | locality | 지역성 | graph-nav, clean-code 실험 README |
-| 문턱 | threshold | 기준값 | clean-code 실험 ADR |
+| 문턱 | threshold | 임계값 (게이트 통과 기준을 말할 때는 기준값) | clean-code 실험 ADR, study-note cs 노트 |
+| 시계 어긋남 | clock skew | 클럭 스큐 | study-note cs/distributed |
 | 칸 (과제 × 구조) | cell | 셀 | clean-code 실험 ADR, 결론 문서 |
 | 탐침, 프로브 | probe | probe (영어 그대로) | compare-issue-archive ADR, study-note 언어 노트 |
 | 업무어 | business term | 업무 용어 | graph-nav 실험 README |
@@ -150,6 +151,29 @@
 | 엄격 한계, 포화점, 반감, 최저점 | 문서 안에서 정의한 측정 지표 이름. 바꾸지 않고 용어 표에 뜻을 단다 |
 | 훑다 (학습 노트에서 본인 설명) | 평범한 한국어. 설계 문서의 scan 뜻일 때만 "스캔"으로 |
 
+### 뜻이 여러 갈래인 낱말 (문서를 보고 뜻을 먼저 가른다)
+
+같은 낱말이 문서마다 다른 개념을 가리킨다. 표의 왼쪽 열로 검색한 뒤, 걸린 곳의 뜻을 보고 고친다.
+
+| 낱말 | 뜻 | 처리 |
+|---|---|---|
+| 기준선 | baseline (비교 기준이 되는 구현이나 측정값) | 베이스라인 |
+| 기준선 | 임계 금액, 마감 시각 같은 경계선 | 그대로 둔다 (실측: 무료 배송 기준선, VACUUM 기준선) |
+| 기준선 | 글자 기준선 (CSS, 조판) | 그대로 둔다. 자리 잡은 용어다 |
+| 문턱 | threshold | 임계값 |
+| 문턱 | 함수나 모듈의 경계 ("함수 문턱에서") | 그대로 둔다 |
+| 어긋남 | 값의 불일치, mismatch | 불일치 |
+| 어긋남 | clock skew | 클럭 스큐 |
+| 어긋난다 (동사) | 시각, 예측이 맞지 않는다 | 그대로 둔다. 평범한 한국어다 |
+| 판정기 | 정합성을 확인하는 도구 | 정합성 검증기, 판정 스크립트 |
+| 판정기 | decider (계산 이론) | 그대로 둔다. 자리 잡은 용어다 |
+| 안전망 | 주기적 전체 스캔 (fallback scan) | 폴백 스캔 |
+| 안전망 | 테스트 안전망 (safety net) | 그대로 둔다. 리팩토링에서 통용되는 말이다 |
+| 바퀴 | full scan 1회 | 풀 스캔 1회 |
+| 바퀴 | 루프 한 바퀴 (iteration) | 그대로 둔다. 학습 노트의 평범한 표현이다 |
+| 대조 | reconcile / 비교 / 대조군 / 양성 대조 | 앞의 둘만 보정, 비교로 바꾼다 |
+| 무음 | silent (실패, 유실, 통과) | 조용한 실패, 조용히 유실된다 |
+
 ### 치환할 때 생긴 사고 (다시 하지 않기 위한 기록)
 
 낱말만 바꾸면 문장이 깨지거나 뜻이 바뀐다. 아래는 실제로 생겼다가 고친 것이다.
@@ -184,4 +208,4 @@
 - 2026-11-18: resume 저장소의 이력서와 포트폴리오(좌석 실험, 팀 프로젝트, 실무 사례 5개)를 사람이 읽는 문장 단위로 검토하며 고친 기록. 작업 기록은 resume 저장소 `docs/plans/2026-11-18/`의 `좌석사례-통합-용어정리`, `팀포트폴리오-문체정리`, `실무사례-문체정리`.
 - 2026-11-18: seat-reservation-lab README 재작성과 ADR 21개 용어 정리. 치환 스크립트와 기록은 그 저장소 `docs/plans/2026-11-18/readme-reader-rewrite/`. 같은 낱말이 여러 뜻으로 쓰여(대조 = 보정, 비교, 대조군, 양성 대조) 일괄 치환하지 않고 뜻이 분명한 꼴만 바꿨다.
 - 2026-11-18: agent-discipline 실험 저장소(clean-code-llm-experiment, graph-nav-experiment, compare-issue-archive)의 README, docs/adr, 결론 문서 22개. 치환 스크립트는 이 저장소 `docs/plans/2026-11-18/wording-sweep/`. need-harness-lab은 실험이 진행 중이고 문서가 에이전트 입력물이라 고치지 않았다. 하네스 정책 문서(core.md, playbooks)의 "무음", "귀속", "안전망"은 정책 변경이라 따로 모아 처리한다.
-- 다음 검토 대상(아직 반영 전): `study-note`.
+- 2026-11-18: study-note 본문(진행 중). 탐침 -> probe, 격벽 -> 벌크헤드, 꼬리 지연 -> 테일 레이턴시, 문턱 -> 임계값, 어긋남 -> 불일치, 기준선 -> 베이스라인(뜻을 갈라 일부만). 치환 도구와 기록은 study-note `docs/plans/2026-11-18/wording-sweep/`.
