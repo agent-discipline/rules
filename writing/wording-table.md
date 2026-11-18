@@ -45,7 +45,7 @@
 | 지엽성 | locality | 지역성 | graph-nav, clean-code 실험 README |
 | 문턱 | threshold | 기준값 | clean-code 실험 ADR |
 | 칸 (과제 × 구조) | cell | 셀 | clean-code 실험 ADR, 결론 문서 |
-| 탐침 | probe | 프로브 | compare-issue-archive ADR |
+| 탐침, 프로브 | probe | probe (영어 그대로) | compare-issue-archive ADR, study-note 언어 노트 |
 | 업무어 | business term | 업무 용어 | graph-nav 실험 README |
 | 본보기 | exemplar | 예시 | clean-code 실험 ADR |
 | 실험장 | experiment repo | 실험 저장소 | 실험 README |
@@ -122,7 +122,7 @@
 |---|---|
 | 대조군, 임계 구역, 오탐, 정합성, 교란변수, 수확 체감, 임계점 | 자리 잡은 용어 |
 | 되돌리다, 건너뛰다, 띄우다, 돌리다(테스트를) | 평범한 한국어 동사 |
-| prod, dev, staging, yml, upsert, flush, precheck, force merge, blue/green | 현업에서 영어 그대로 쓰는 말. 한글로 음차하거나 풀어 옮기지 않는다 |
+| probe, prod, dev, staging, yml, upsert, flush, precheck, force merge, blue/green | 현업에서 영어 그대로 쓰는 말. 한글로 음차하거나 풀어 옮기지 않는다 |
 | 승격(공용 패키지로) | 개발자가 실제로 쓰는 말 |
 | 캐시 오염, 컨텍스트 오염 | cache pollution의 통용 번역 (측정 노이즈 뜻의 "오염"과 다르다) |
 | 정산 대조 | 결제 도메인에서 쓰는 말 (카운터 보정 뜻의 "대조"와 다르다) |
