@@ -52,4 +52,6 @@
 
 ## 현재 상태
 
-저장소를 막 시작한 단계로, 정립된 규칙은 아직 없다. 디렉토리 구조와 규칙 문서 형식은 첫 규칙을 정립하면서 정한다.
+이 저장소는 지금 보류 상태다(2026-11-20). 규칙은 당분간 [harness](https://github.com/agent-discipline/harness) 안에 두고 다듬기로 했다. 규칙을 따로 떼어 낼 만큼 쌓이면 이 저장소를 다시 쓴다.
+
+처음 정립한 글쓰기 규칙(공통 원칙, 낱말 사례 표, 작업 기록, 그림)은 harness의 [`playbooks/writing/`](https://github.com/agent-discipline/harness/tree/main/playbooks/writing)으로 옮겼다. 이 저장소에 있던 `writing/`과 `ROUTING.md`는 지웠고, 옮기기 전의 내용과 변경 기록은 이 저장소의 커밋 기록에 남아 있다. 낱말을 일괄로 고칠 때 쓴 스크립트와 그 기록은 `docs/plans/2026-11-18/wording-sweep/`에 그대로 있다.
